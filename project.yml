@@ -1,0 +1,35 @@
+name: MyMusic
+options:
+  bundleIdPrefix: com.nikitasdk
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  YouTubeKit:
+    url: https://github.com/alexeichhorn/YouTubeKit
+    from: 0.4.9
+targets:
+  MyMusic:
+    type: application
+    platform: iOS
+    sources: [MyMusic]
+    dependencies:
+      - package: YouTubeKit
+    scheme: {}
+    info:
+      path: MyMusic/Info.plist
+      properties:
+        CFBundleDisplayName: MyMusic
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UIBackgroundModes: [audio]
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nikitasdk.mymusic
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGNING_ALLOWED: "NO"
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGN_IDENTITY: ""
